@@ -4,7 +4,7 @@ const { green } = require('chalk')
 const express = require('express')
 const hbs = require('hbs')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 const geocoding = require('./utils/geocoding')
 const weather = require('./utils/weather')
@@ -122,5 +122,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(green(`\n > server running on http://localhost:${port}\n`))
+    console.log(green(`\n > server running on port ${port}\n`))
 })
