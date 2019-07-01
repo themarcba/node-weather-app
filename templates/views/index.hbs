@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{appTitle}}</title>
+    <link rel="stylesheet" href="/assets/stylesheets/main.css">
+    <script src="https://kit.fontawesome.com/862dd0558b.js"></script>
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>Welcome to this demo Node.js Weather Site</p>
+
+        <form id="weather">
+            <input type="text" name="address" id="address" placeholder="Address here...">
+            {{!-- <div id="submit-button" class="button">Search <i class="fa fa-search"></i></div> --}}
+        </form>
+
+        <div class="errors">
+            Yo! This is an error
+        </div>
+        <div class="weather">
+            <div class="center" style="margin: 30px 0">
+                <div style="font-size: 5em;">
+                    <span class="icon">
+                        <i class="fal fa-sun"></i>
+                    </span>
+                    <span class="temperature current-temperature">25</span><span class="unit">°C</span>
+                </div>
+
+                <div class="summary">Humid and partly cloudy throughout the day</div>
+                <div class="precip">
+                    (There is a <span class="precip-probability">11</span>% chance of <span
+                        class="precip-type">rain</span>.)
+                </div>
+            </div>
+            <div class="center">
+                <div class="temperature-container low">
+                    <span class="temperature min-temperature">15</span>°C
+                    <div class="subtitle">
+                        <i class="fal fa-temperature-low"></i>
+                        Low
+                    </div>
+
+                </div>
+                <div class="temperature-container high">
+                    <span class="temperature max-temperature">30</span>°C
+                    <div class="subtitle">
+                        <i class="fal fa-temperature-high"></i>
+                        High
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {{>footer}}
+    <script src="/assets/javascript/index.js"></script>
+</body>
+
+</html>
